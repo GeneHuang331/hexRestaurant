@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('.menuOpen').click(function(){
+        $('body').toggleClass('open-menu');
+    });
+    $('.heart').click(function(){
+        $(this).toggleClass('far');
+        $(this).toggleClass('fas');
+    });
+});

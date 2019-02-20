@@ -1,0 +1,708 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+q, blockquote {
+	quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+	content: "";
+	content: none;
+}
+a img {
+	border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto ;
+}
+/* CSS Reset end -----------------*/
+/* index.html start... */
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: #785a50;
+    color:#3D1101;
+    line-height: 1.5;
+}
+/* 清除浮動 */
+/* clearfix float */
+.clearfix:before, .clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+}
+.clearfix {
+  zoom:1;
+}
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: #EFE9E7;
+}
+/* header  */
+.logo{
+    float: left;
+}
+.header{
+    background: url(../image/header_desktop.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    overflow:auto ;
+
+    
+}
+.topBar{
+    background-color: rgb(0,0,0,0.75);
+}
+.menu{
+    float: right;
+
+}
+.menu li{
+    float: left;
+
+}
+.menu li a{
+    display: block;
+    padding:20px;
+    color: #fff;
+}
+.menu li a:hover,.menu li a:active{
+    background-color: rgb(255, 255, 255,0.15);
+    color: #be3603;
+}
+.logo a {
+    display: block;
+    width: 120px;
+    height: 24px;
+    background: url(../image/logo_w@svg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin:20px 0 20px 42px;
+    
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menuOpen{
+    display: none;
+    float: right;
+}
+@media (max-width:414px){
+    .header{
+        background: url(../image/header_mobile.png);
+        background-repeat: no-repeat;
+        background-position: center ;
+            background-size: cover;
+    }
+    .menu {
+        background-color: rgb(0,0,0,0.75);
+        position: absolute;
+        top: 64px;
+        width: 100%;
+        float: none;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height,.5s
+    }
+    .menu li{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .menu li a{
+        padding:0px;
+    }
+    .menuOpen{
+        display: block;
+        width: 64px;
+        height: 64px;
+    }
+    .open-menu .menu{
+        max-height: 72px;
+
+    }
+}
+/* .banner */
+.banner{
+    background-color: rgb(0,0,0,0.35);
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+
+}
+.banner h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+
+}
+@media(max-width:768px){
+    .banner{
+        width: 60%;
+    }
+}
+@media (max-width:414px){
+    .banner{
+        margin-top:70px;
+        width:90%;
+    }
+    .banner h2 span{
+        display: block;
+    }
+}
+@media (max-width:320px){
+    .banner h2{
+        font-size: 30px;
+    }
+}
+/* footer */
+.about,.contact,.footerLogo{
+    float: left;
+    width: 30.33333%;
+    margin: 1.5%;
+    color: #3D1101;
+}
+.footer{
+    padding: 50px 20px;
+}
+.contact ul li{
+    list-style: disc inside;
+
+}
+.footer h4{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.footerLogo h1{
+    float: right;
+}
+.footerLogo h1 a{
+    display: block;
+    width: 245px;
+    height: 49px;
+    background: url(../image/logo_l@svg.svg);
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px;
+
+}
+.fansPage{
+    float: right;
+}
+.fansPage li{
+    float: left;
+    font-size: 36px;
+    margin: 10px;
+}
+@media (max-width:568px){
+    .about,.contact,.footerLogo{
+        float: none;
+        width: 90%;
+        margin: 5%;
+        color: #3D1101;
+    }
+    .fansPage{
+        float: none;
+    }
+    .footerLogo h1{
+        float: none;   
+
+    }
+    .footerLogo h1 a{
+        margin: 50px auto;;
+    }
+    .fansPage li{
+        float: left;
+        width: 30.33333%;
+        margin: 1.5%;
+        font-size: 60px;
+        text-align: center;
+}
+}
+
+/* layout.html end... */
+/* index.html start... */
+/* index.html */
+.secret{
+    text-align: center;
+    padding: 50px 20px;
+    
+}
+.secretTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  stroke: #979797;
+  stroke-width:1;
+}
+.indexSlogan {
+    font-size: 20px;
+    margin:0 20px 20px 20px ;
+}
+.secretContent li{
+    float: left;
+    width: 30.33333%;
+    margin:0 1.5%;
+}
+.secretContent li img{
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.secretContent li h3{
+    font-size: 18px;
+     margin-bottom: 10px;
+}
+.secretContent li p {
+    text-align: left;
+}
+@media(max-width:414px){
+    .secretContent li{
+        float: none;
+        width: 90%;
+        margin: 5%;
+    }
+}
+/* index.html todaychef */
+.todayChef{
+    background-color: #3D1101;
+    color: #EFE9E7;
+
+}
+.chefImg{
+    float: left;
+    width: 48%;
+    min-height: 460px;
+    margin-left: 2%;
+}
+.chefDescription{
+    background-color: #3D1101;
+    float: left;
+    width: 50%;
+    padding: 40px;
+}
+.chefDescription p{
+    margin-top: 20px;
+}
+/*  index.html todayChef @media */
+@media(max-width:414px){
+   .indexSlogan{
+       font-size: 16px;
+   } 
+   .chefImg{
+    float: none;
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+    }
+    .chefDescription{
+    float: none;
+    width: 100%;
+}
+}
+
+/* index.html impression */
+.impression{
+    padding: 50px 20px;
+}
+.impression h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.impressionContent li img{
+    float: left;
+    width: 20%;
+    border-radius: 50%;
+
+}
+.impressContentText{
+    float: left;
+    width: 80%;;
+    padding: 10px;
+}
+.impressContentText h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.impressionContent li {
+    float: left;
+    width: 30.33333%;
+    margin: 1.5% 0 0 3%;
+}
+.impressionContentName{
+    margin-top: 20px;
+    text-align: right;
+}
+@media(max-width:414px){
+   .impressionContent li {
+    float: none;
+    width: 90%;
+    margin: 5%;
+}
+}
+
+/* booking*/
+.booking{
+    padding:50px;
+}
+.booking h3{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 38px;
+}
+.googlemap{
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+}
+.booking-form{
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+}
+.booking-form input[type="text"],.booking-form input[type="email"],.booking-form input[type="number"],.booking-form input[type="tel"]{
+    width: 100%;
+}
+.needVeg-yes {
+    margin-right: 30px !important;
+}
+.booking-form-btn{
+    float: right;
+}
+
+/* index.html booking @media */
+@media(max-width:768px){
+    .booking{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 480px){}
+    .pure-form button[type=submit] {
+        margin:0;
+}
+@media(max-width:414px){
+    .googlemap{
+        float: none;
+        width: 90%;
+        margin: 5%;
+    }
+    .booking-form{
+        float: none;
+        width: 90%;
+        margin: 5%;
+    }
+}
+/* index.html end... */
+/* cart.html start... */
+.productAside {
+    float: left;
+    width: 30%;
+    color: #3D1101;
+    margin-top: 50px;
+}
+.productAside h3{
+    font-size: 20px;
+    text-align: center;
+}
+.productAside h3 i{
+    padding:10px;
+}
+.productMenu{
+    padding: 30px;
+}
+.productMenu li a{
+    display: block;
+    color: #3D1101;
+    border-bottom: 1px solid #3D1101;
+    padding: 5px;
+    transition: all,.3s;
+}
+.productMenu li a:hover,.productMenu li a:active{
+    background-color: #3D1101;
+    color: #EFE9E7;
+}
+.productMain{
+    margin-top: 50px;
+    float: left;
+    width: 70%;
+}
+.searchBar{
+    float: left;
+    width: 70%;
+}
+.searchBar input{
+    width: 65%;
+    height: 32px;
+    border: 2px solid #3D1101;
+    background-color: #EFE9E7;
+    font-size: 19px;
+
+}
+.searchBar input:focus{
+    border: 2px solid #ad3203;
+    outline: none;
+}
+.searchBar a{
+    background: #3D1101;
+    color: #EFE9E7;
+    border: none;
+    outline: none;
+    height: 32px;
+    font-size: 19px;
+    padding: 3.4px 6px;
+}
+.searchBar a:hover,.searchBar a:active{
+    background-color: #ad3203;
+}
+.shopingCart{
+    float: right;
+    margin-right: 20px;
+
+}
+.shopingCart a{
+    color: #3D1101;
+    padding:0 10px;
+}
+.shopingCart .fa-shopping-cart{
+    font-size: 20px;
+}
+.shopingCart a:hover ,.shopingCart a:active{
+    color: #FF5E45;
+} 
+.checkOut {
+    border-right: 1px solid #3D1101;
+}
+.productDescription li{
+    position: relative;
+    float: left;
+    width: 30.33333%;
+    margin: 5% 3% 5% 0;
+    text-align: center;
+    box-shadow: 3px 3px 4px #cecece;
+}
+/* heart start */
+.heart {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+     font-size: 20px;
+    color:#fff;
+}
+.heart:hover,.heart:active{
+    font-size: 25px;
+    cursor: pointer;
+}
+/* ribbon start */
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+/* ribbon end */
+.productDescription li button{
+    background-color: #EFE9E7;;
+    border: 2px solid #FF5E45;
+    border-radius: 3px;
+    width: 90%;
+    margin: 5%;
+    color: #FF5E45;
+    outline: none;
+}
+.productDescription li button:hover,.productDescription li button:active{
+    background-color: #FF5E45;
+    color:  #fff;
+}
+.p-title1{
+    font-size: 20px
+}
+.p-title2{
+    font-size: 12px
+}
+.productDescription li p {
+    font-size: 20px
+}
+@media(max-width:768px){
+    .productAside {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+    }
+    .productMenu{
+        padding: 10px;
+    }
+    .productMain{
+        float: none;
+        width: 100%;
+    }
+    .searchBar{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .searchBar input{
+        width: 85%;
+    }
+    .shopingCart{
+        margin-top: 20px;
+    }
+    .productMain{
+        margin-top: 20px;
+    }
+   
+    .productDescription li{
+        width: 46%;
+        margin: 2% ;
+    }
+}
+@media(max-width:414px){
+    .productDescription li{
+        float: none;
+        width: 95%;
+        margin: 20px 2.5%;
+    }
+
+}
+/* login.index start */
+.loginContent{
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.loginContent h2 {
+    text-align: center;
+    display: block;
+
+}
+.loginContent p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.login-form{
+    border-top: 3px solid #F56C23;
+    padding: 15px;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+}
+
+.login-form legend{
+    text-align: center;
+    font-weight: bold;
+    color: #3D1101;
+}
+.login-form .pure-form-stacked  input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-form .pure-form-stacked  button{
+    display: block;
+    float: left;
+    width: 40%;
+    margin: 5%;
+    background: #969696;
+}
+.login-form .pure-form-stacked  button:hover,.login-form .pure-form-stacked  button:active{
+    background: #818181;
+}
+.login-form .pure-form-stacked input:focus{
+    border: 2px solid #F56C23;
+    outline: none;
+}
+
+.login-form .pure-form-stacked  button[type=submit]{
+    background: #F56C23;
+}
+.login-form .pure-form-stacked  button[type=submit]:hover,.login-form .pure-form-stacked  button[type=submit]:active{
+    background: #ee5a0b;
+}
+@media(max-width: 767px){
+    .loginContent{
+    width: 90%;
+    padding:50px 0 0 0;
+    
+    }
+}
